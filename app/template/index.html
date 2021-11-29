@@ -1,0 +1,20 @@
+<html>
+	
+	<head>
+		<title>Review evaluator</title>
+	</head>
+	<body>
+		<h2>Enter your review:</h2>
+		<p>The accuracy increases with sentences amount</p>
+		<br />
+		<form method="post" action="predict">
+		{% csrf_token %}
+			<p><textarea name="review" placeholder="This was a great movie. Loves it so much!!!" rows="5" cols="40"></textarea></p>
+			<br />
+			<input type="submit" value="Submit">
+		</form>
+		<p>Rating based on this review: {{rating}}</p>
+		<p>Sentiment of the review: {{sentiment}}</p>
+	</body>
+
+</html>
